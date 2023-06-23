@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="30dp">
+
+    <TextView
+        android:id="@+id/dialogtitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:fontFamily="@font/cairo_bold"
+        android:textDirection="rtl">
+    </TextView>
+
+    <TextView
+        android:id="@+id/dialogtv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/dialogtitle"
+        android:layout_marginTop="10dp"
+        android:text="@string/enterlandname"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/cairo_bold"
+        android:textDirection="rtl">
+
+    </TextView>
+
+    <EditText
+        android:id="@+id/dialoget"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/dialogtv"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="4dp"
+        android:textDirection="rtl"
+        android:hint="@string/landname"
+        android:textAlignment="viewEnd"
+        android:inputType="text"
+        android:imeOptions="actionDone"
+    />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/linearlayout"
+        android:layout_below="@id/dialoget"
+
+        >
+
+        <Button
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/cancelbtn"
+            android:text="@string/cancel"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:backgroundTint="@color/red"
+            android:layout_marginHorizontal="4dp"
+            >
+        </Button>
+        <Button
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/savebtn"
+            android:text="@string/save"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:backgroundTint="@color/green"
+            android:layout_marginHorizontal="4dp"
+            ></Button>
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">AgriSnap</string>
+    <string name="username">اسم المستخدم</string>
+    <string name="password">كلمة المرور</string>
+    <string name="login">تسجيل الدخول</string>
+    <string name="latitude">خط العرض </string>
+    <string name="longitude">خط الطول </string>
+    <string name="timestamp">الطابع الزمني</string>
+    <string name="date">التاريخ</string>
+    <string name="save">حفظ</string>
+    <string name="cancel">إلغاء</string>
+    <string name="searchfile">البحث عن ملف</string>
+    <string name="createnewfile"> إنشاء ملف جديد</string>
+    <string name="images">الصور</string>
+    <string name="cities">الولايات</string>
+    <string name="towns">البلديات</string>
+    <string name="sites">المواقع</string>
+    <string name="lands">الأراضي</string>
+    <string name="landname">اسم الأرض</string>
+    <string name="sitename">اسم الموقع</string>
+    <string name="enterlandname">أدخل اسم الأرض</string>
+    <string name="entersitename">أدخل اسم الموقع</string>
+    <string name="newlandaddition">إضافة أرض جديدة</string>
+    <string name="newsiteaddition">إضافة موقع جديد</string>
+    <string name="falseangle">زاوية هاتفك خاطئة</string>
+    <string name="falselocation">موقعك خاطئ الرجاء الذهاب الى الموقع الصحيح</string>
+    <string name="choosecity">اختر الولاية</string>
+    <string name="begin">ابدأ</string>
+    <string name="Laghouat">الأغواط</string>
+    <string name="welcome">مرحبا بك !</string>
+
+
+</resources>

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CameraActivity">
+
+
+
+    <androidx.camera.view.PreviewView
+        android:id="@+id/preview_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:backgroundTint="@color/black"
+        android:layout_gravity="center" />
+
+    <Button
+        android:id="@+id/capturebtn"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="70dp"
+        android:background="@drawable/camera_disabled"
+        android:foreground="@drawable/camera_disabled"
+        app:elevation="6dp"
+        app:pressedTranslationZ="12dp" />
+
+    <TextView
+        android:id="@+id/latitudetxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/cairo_extrabold"
+        android:padding="5dp"
+        android:text="@string/latitude"
+        android:textColor="@color/white"
+        android:textDirection="rtl"
+        android:textSize="16sp"></TextView>
+
+    <TextView
+        android:id="@+id/latitudetv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/latitudetxt"
+        android:layout_alignParentLeft="true"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="30dp"
+        android:background="@drawable/gps_shape"
+        android:fontFamily="@font/cairo_extrabold"
+        android:padding="5dp"
+        android:text=""
+        android:textColor="@color/black"
+        android:textDirection="rtl"
+        android:textSize="16sp"></TextView>
+
+    <TextView
+        android:id="@+id/longitudetxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/cairo_extrabold"
+        android:padding="5dp"
+        android:text="@string/longitude"
+        android:textColor="@color/white"
+        android:textDirection="rtl"
+        android:textSize="16sp"></TextView>
+
+    <TextView
+        android:id="@+id/longitudetv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/longitudetxt"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/gps_shape"
+        android:fontFamily="@font/cairo_extrabold"
+        android:padding="5dp"
+        android:text=""
+        android:textColor="@color/black"
+        android:textSize="16sp"></TextView>
+
+    <TextView
+        android:id="@+id/rolltext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerInParent="true"
+        android:layout_marginHorizontal="10dp"
+        android:background="@drawable/xy_shape"
+        android:fontFamily="@font/cairo_extrabold"
+        android:padding="4dp"
+        android:text="1"
+        android:textColor="@color/red"
+        android:textSize="16sp"></TextView>
+    <TextView
+        android:id="@+id/pitchtext"
+        android:layout_marginHorizontal="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/red"
+        android:padding="4dp"
+        android:text="2"
+        android:textSize="16sp"
+        android:fontFamily="@font/cairo_extrabold"
+        android:layout_alignParentRight="true"
+        android:layout_centerInParent="true"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/xy_shape"
+
+        ></TextView>
+</RelativeLayout>

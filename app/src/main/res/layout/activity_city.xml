@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CityActivity">
+<TextView
+    android:layout_marginTop="70dp"
+    android:paddingRight="50dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/welcometv"
+    android:text="@string/welcome"
+    android:fontFamily="@font/cairo_extrabold"
+    android:textSize="40sp"
+    android:textColor="@color/black">
+</TextView>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:backgroundTint="@color/white">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/wilayatv"
+        android:text="@string/choosecity"
+        android:fontFamily="@font/cairo_extrabold"
+        android:textSize="20sp"
+        android:textColor="@color/black">
+
+    </TextView>
+    <Spinner
+        android:layout_marginTop="20dp"
+        android:id="@+id/spinner"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        >
+
+    </Spinner>
+    <Button
+        android:layout_marginTop="40dp"
+        android:id="@+id/citybtn"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:text="@string/begin"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/green"
+        android:textSize="20sp"
+        android:fontFamily="@font/cairo_extrabold">
+
+    </Button>
+</LinearLayout>
+</RelativeLayout>
