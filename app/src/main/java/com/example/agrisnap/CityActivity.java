@@ -56,7 +56,6 @@ public class CityActivity extends AppCompatActivity implements AdapterView.OnIte
         setContentView(R.layout.activity_city);
         Spinner spinner = findViewById(R.id.spinner);
         TextView wilayatv = findViewById(R.id.wilayatv);
-        TextView welcometv = findViewById(R.id.welcometv);
         Button cityBtn = findViewById(R.id.citybtn);
 
 
@@ -97,12 +96,10 @@ public class CityActivity extends AppCompatActivity implements AdapterView.OnIte
 
                 }
                 SharedPreferences.Editor editor = preferences.edit();
-                editor.putBoolean("isFirstLaunch", true);
+                editor.putBoolean("isFirstLaunch", false);
                 editor.putString("path", path);
                 editor.putInt("cityId", cityId);
                 editor.apply();
-
-//                Toast.makeText(this, String.valueOf(editor.g), Toast.LENGTH_SHORT).show();
 
                 Intent intent = new Intent(CityActivity.this, TownsActivity.class);
                 startActivity(intent);

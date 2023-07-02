@@ -1,6 +1,6 @@
 package Controller;
 
-import static Utils.Utils.TABLE_AGENT;
+
 
 import android.annotation.SuppressLint;
 import android.content.ContentValues;
@@ -314,50 +314,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         return  ImageList;
     }
-    public int countImages(int landId) {
-        SQLiteDatabase database = this.getReadableDatabase();
-        Cursor cursor = database.query(TABLE_IMAGE ,
-                new String[]{IMAGE_ID,LAND_ID_FK
-                },
-                LAND_ID_FK + "=?",new String[]{String.valueOf(landId)},
-                null,null,null,null);
 
-        int result=cursor.getCount();
-        cursor.close();
-        database.close();
 
-        return result;
-    }
 
-    @SuppressLint("Range")
-    public Image getFirstImage(int landId) {
-        SQLiteDatabase database = this.getReadableDatabase() ;
-        Cursor cursor = database.query(TABLE_IMAGE ,
-                new String[]{IMAGE_ID,IMAGE_NAME,IMAGE_PATH,IMAGE_DEVICENAME,IMAGE_TIME,IMAGE_DATE,IMAGE_LAT,IMAGE_LON,LAND_ID_FK
-                },
-                LAND_ID_FK + "=?",new String[]{String.valueOf(landId)},
-                null,null,null,String.valueOf(1));
-
-        Image Image = new Image();
-
-        if (cursor.moveToFirst())
-            do {
-                Image.setImageId(cursor.getInt(cursor.getColumnIndex(IMAGE_ID)));
-                Image.setImageName(cursor.getString(cursor.getColumnIndex(IMAGE_NAME)));
-                Image.setImagePath(cursor.getString(cursor.getColumnIndex(IMAGE_PATH)));
-                Image.setImageDeviceName(cursor.getString(cursor.getColumnIndex(IMAGE_DEVICENAME)));
-                Image.setImageTime(cursor.getString(cursor.getColumnIndex(IMAGE_TIME)));
-                Image.setImageDate(cursor.getString(cursor.getColumnIndex(IMAGE_DATE)));
-                Image.setImageLat(cursor.getString(cursor.getColumnIndex(IMAGE_LAT)));
-                Image.setImageLon(cursor.getString(cursor.getColumnIndex(IMAGE_LON)));
-
-            } while (cursor.moveToNext());
-
-        cursor.close();
-        database.close();
-
-        return  Image;
-    }
 
 
     public  List<String> getCities(){

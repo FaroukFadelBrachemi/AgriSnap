@@ -64,8 +64,11 @@ public class ImagesAdapter extends RecyclerView.Adapter<ImageViewHolder>{
         Bitmap imageBitmap = BitmapFactory.decodeFile(data.getImagePath());
         Matrix matrix = new Matrix();
         matrix.postRotate(-90); // Negative angle for left rotation
-        Bitmap rotatedBitmap = Bitmap.createBitmap(imageBitmap, 0, 0, imageBitmap.getWidth(), imageBitmap.getHeight(), matrix, true);
-        holder.imageView.setImageBitmap(rotatedBitmap);
+        if(imageBitmap!=null){
+            Bitmap rotatedBitmap = Bitmap.createBitmap(imageBitmap, 0, 0, imageBitmap.getWidth(), imageBitmap.getHeight(), matrix, true);
+            holder.imageView.setImageBitmap(rotatedBitmap);
+        }
+
 
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {

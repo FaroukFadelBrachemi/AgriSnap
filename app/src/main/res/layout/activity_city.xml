@@ -6,54 +6,45 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".CityActivity">
-<TextView
-    android:layout_marginTop="70dp"
-    android:paddingRight="50dp"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:id="@+id/welcometv"
-    android:text="@string/welcome"
-    android:fontFamily="@font/cairo_extrabold"
-    android:textSize="40sp"
-    android:textColor="@color/black">
-</TextView>
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:gravity="center"
-    android:backgroundTint="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:backgroundTint="@color/white"
+        android:gravity="center"
+        android:orientation="vertical">
 
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/wilayatv"
-        android:text="@string/choosecity"
-        android:fontFamily="@font/cairo_extrabold"
-        android:textSize="20sp"
-        android:textColor="@color/black">
+        <TextView
+            android:id="@+id/wilayatv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/cairo_extrabold"
+            android:text="@string/choosecity"
+            android:textColor="@color/black"
+            android:textSize="20sp">
 
-    </TextView>
-    <Spinner
-        android:layout_marginTop="20dp"
-        android:id="@+id/spinner"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        >
+        </TextView>
 
-    </Spinner>
-    <Button
-        android:layout_marginTop="40dp"
-        android:id="@+id/citybtn"
-        android:layout_width="140dp"
-        android:layout_height="wrap_content"
-        android:text="@string/begin"
-        android:textColor="@color/white"
-        android:backgroundTint="@color/green"
-        android:textSize="20sp"
-        android:fontFamily="@font/cairo_extrabold">
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp">
 
-    </Button>
-</LinearLayout>
+        </Spinner>
+
+        <Button
+            android:id="@+id/citybtn"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:backgroundTint="@color/green"
+            android:fontFamily="@font/cairo_extrabold"
+            android:text="@string/begin"
+            android:textColor="@color/white"
+            android:textSize="20sp">
+
+        </Button>
+    </LinearLayout>
 </RelativeLayout>

@@ -44,9 +44,9 @@ public class TownsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_towns);
 
         preferences = getSharedPreferences("MyPrefs", MODE_PRIVATE);
-        isFirstLaunch = preferences.getBoolean("isFirstLaunch", false);
+        isFirstLaunch = preferences.getBoolean("isFirstLaunch", true);
 
-        if (!isFirstLaunch) {
+        if (isFirstLaunch) {
             startActivity(new Intent(TownsActivity.this, CityActivity.class));
         }else{
             cityId=preferences.getInt("cityId", 0);

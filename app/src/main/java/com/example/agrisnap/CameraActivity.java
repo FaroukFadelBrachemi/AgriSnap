@@ -270,27 +270,10 @@ public class CameraActivity extends AppCompatActivity {
         selectedLocation.setLongitude((float)selectedLongitude);
 
         float distance = selectedLocation.distanceTo(currentLocation);
-        return distance<=DISTANCE;
+        return distance <= DISTANCE;
     }
 
-    private boolean checkLatitude() {
 
-        DecimalFormat decimalFormat = new DecimalFormat("#.####");
-        String roundedselectedLatitude = decimalFormat.format(selectedLatitude);
-        String roundedLatitude = decimalFormat.format(latitude);
-
-
-        return roundedselectedLatitude.equals(roundedLatitude) ;
-    }
-
-    private boolean checkLongitude() {
-        DecimalFormat decimalFormat = new DecimalFormat("#.####");
-        String roundedselectedLongitude = decimalFormat.format(selectedLongitude);
-        String roundedLongitude = decimalFormat.format(longitude);
-
-
-        return roundedselectedLongitude.equals(roundedLongitude);
-    }
 
     private boolean checkGPS(){
         return ContextCompat.checkSelfPermission(CameraActivity.this, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED;
@@ -429,7 +412,6 @@ public class CameraActivity extends AppCompatActivity {
                     @Override
                     public void onImageSaved(@NonNull ImageCapture.OutputFileResults outputFileResults) {
                         saveImg();
-
                     }
 
                     @Override
@@ -443,15 +425,11 @@ public class CameraActivity extends AppCompatActivity {
         );
 
     }
-    //
 
 
     private void saveImg() {
             databaseHelper = new DatabaseHelper(this);
             Image image=new Image();
-//            DecimalFormat decimalFormat = new DecimalFormat("#.######");
-//            String roundedlatitude = decimalFormat.format(latitude);
-//            String roundedlongitude = decimalFormat.format(longitude);
 
             image.setImageLat(String.valueOf(latitude));
             image.setImageLon(String.valueOf(longitude));

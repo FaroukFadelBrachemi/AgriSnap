@@ -11,15 +11,7 @@ import androidx.core.content.ContextCompat;
 public class Utils {
 
 
-    public static final String TABLE_AGENT = "AGENT";
-    public static final String AGENT_ID = "AGENT_ID";
-    public static final String AGENT_NAME = "AGENT_NAME";
-    public static final String AGENT_LASTNAME = "AGENT_LASTNAME";
-    public static final String AGENT_USERNAME = "AGENT_USERNAME";
-    public static final String AGENT_PASSWORD = "AGENT_PASSWORD";
-    public static final String AGENT_DEVICE = "AGENT_DEVICE";
-    public static final String AGENT_PICTURE = "AGENT_PICTURE";
-    public static final String AGENT_BIRTH = "AGENT_BIRTH";
+
     public static final String TABLE_IMAGE = "IMAGE";
     public static final String IMAGE_ID = "IMAGE_ID";
     public static final String IMAGE_NAME = "IMAGE_NAME";
@@ -47,15 +39,14 @@ public class Utils {
     public static final String CITY_ID = "CITY_ID";
     public static final String CITY_NAME = "CITY_NAME";
 
-    public static final String AGENT_ID_FK = "AGENT_ID_FK";
+
     public static final String LAND_ID_FK = "LAND_ID_FK";
-    public static final String FARMER_ID_FK = "FARMER_ID_FK";
     public static final String SITE_ID_FK = "SITE_ID_FK";
     public static final String CITY_ID_FK = "CITY_ID_FK";
     public static final String TOWN_ID_FK = "TOWN_ID_FK";
 
     public  static final  int DATABASE_VERSION = 1;
-    public  static final  String DATABASE_NAME = "ASDB";
+    public  static final  String DATABASE_NAME = "APPDB";
 
     public static boolean isPermissionGranted (Context context) {
         if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.R)

@@ -29,6 +29,7 @@ import androidx.fragment.app.FragmentManager;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.io.File;
+import java.text.DecimalFormat;
 
 import Controller.DatabaseHelper;
 import Models.Image;
@@ -74,11 +75,16 @@ public class ImageFrag extends AppCompatDialogFragment {
         deleteBtn = view.findViewById(R.id.deletebtn);
         compareBtn= view.findViewById(R.id.comparebtn);
 
+
         Bitmap imageBitmap = BitmapFactory.decodeFile(imagePath);
         Matrix matrix = new Matrix();
         matrix.postRotate(-90);
-        Bitmap rotatedBitmap = Bitmap.createBitmap(imageBitmap, 0, 0, imageBitmap.getWidth(), imageBitmap.getHeight(), matrix, true);
-        imageView.setImageBitmap(rotatedBitmap);
+        if(imageBitmap!=null){
+            Bitmap rotatedBitmap = Bitmap.createBitmap(imageBitmap, 0, 0, imageBitmap.getWidth(), imageBitmap.getHeight(), matrix, true);
+            imageView.setImageBitmap(rotatedBitmap);
+        }
+
+
         latitudeTextView.setText(getString(R.string.latitude)+": "+latitude);
         longitudeTextView.setText(getString(R.string.longitude)+": "+longitude);
         nameTextView.setText(name);
